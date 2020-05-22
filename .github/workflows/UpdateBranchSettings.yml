@@ -21,4 +21,4 @@ jobs:
     - name: Update branch settings
       run: | 
         cd platform-v3-tools
-        pwsh UpdateBranchSettings.ps1 -AccessToken ${{ secrets.GITHUB_ALLREPOSITORIES_TOKEN }} -Organization leonidnorg
+        pwsh UpdateBranchSettings.ps1 -AccessToken ${{ secrets.ALLREPOSITORIES_GITHUB_TOKEN }} -Organization leonidnorg
