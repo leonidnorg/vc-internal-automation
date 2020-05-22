@@ -6,7 +6,7 @@ param(
 $Branches = "dev", "master"
 
 if (-not (Get-Module -ListAvailable -Name PowerShellForGitHub)) {
-    Install-Module PowerShellForGitHub
+    Install-Module PowerShellForGitHub -Force
 }
 
 Import-Module PowerShellForGitHub
