@@ -1,5 +1,6 @@
 param(
     $AccessToken,
+    $WorkingPath,
     $Organization = 'VirtoCommerce'
 )
 
@@ -14,7 +15,7 @@ Import-Module PowerShellForGitHub
 $repositories =
     "vc-platform"
 
-$template = Get-Content "rep-branch-settings.json" | Out-String
+$template = Get-Content (Join-Path $WorkingPath "rep-branch-settings.json") | Out-String
 
 $repositories | ForEach-Object {
 
