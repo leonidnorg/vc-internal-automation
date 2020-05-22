@@ -19,4 +19,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Update branch settings
-      run: pwsh platform-v3-tools/UpdateBranchSettings.ps1 -AccessToken ${{ secrets.GITHUB_TOKEN }} -Organization leonidnorg
+      run: pwsh platform-v3-tools/UpdateBranchSettings.ps1 -AccessToken ${{ secrets.GITHUB_TOKEN }} -Organization leonidnorg -WorkingPath "$($GITHUB_WORKSPACE)/platform-v3-tools"
