@@ -13,7 +13,7 @@ Import-Module PowerShellForGitHub
 
 $repositories =
     "vc-platform"
-    
+
 $template = Get-Content "rep-branch-settings.json" | Out-String
 
 $repositories | ForEach-Object {
@@ -30,7 +30,7 @@ $repositories | ForEach-Object {
             'Method' = 'PUT'
             'AccessToken' = $AccessToken
             'UriFragment' = "repos/$($Organization)/$($Repository)/branches/$($Branch)/protection"
-            'Description' =  "Get master branch protection settings for $($Repository)"
+            'Description' =  "Set $($Repository) protection settings for $($Repository)"
         }
         
         Invoke-GHRestMethod @params -Body $settings | Out-Null
