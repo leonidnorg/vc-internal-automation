@@ -4,6 +4,10 @@ name: Update repositories branch settings
 on:
   push:
     branches: [ master ]
+    paths:
+    - 'platform-v3-tools/UpdateBranchSettings.ps1'
+    - 'platform-v3-tools/rep-branch-settings.json'
+    - '.github/workflows/UpdateBranchSettings.yml'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
