@@ -20,5 +20,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: Update branch settings
       run: | 
-        pwsh Set-Location ./platform-v3-tools/ -ErrorAction Ignore
+        cd platform-v3-tools
         pwsh UpdateBranchSettings.ps1 -AccessToken ${{ secrets.GITHUB_TOKEN }} -Organization leonidnorg
